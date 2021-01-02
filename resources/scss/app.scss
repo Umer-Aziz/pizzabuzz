@@ -1,0 +1,68 @@
+@import "./variables";
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $dark;
+  height: 5000px;
+}
+nav {
+  font-family: "Rubik", sans-serif;
+}
+nav .navbar-brand {
+  color: $primary !important;
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-shadow: 3px 2px 5px $primary;
+}
+
+nav img {
+  height: 36px;
+  padding: 5px;
+  width: 47px;
+  display: inline-block;
+  border-radius: 25%;
+  -webkit-box-shadow: 5px 5px 15px 0px $primary;
+  box-shadow: 5px 5px 15px 0px $primary;
+  background-color: $primary;
+}
+nav img {
+  &:hover {
+    background: $primary-hover;
+    transform: scale(1.1);
+  }
+}
+nav li a {
+  font-size: 20px;
+  align-items: center;
+}
+
+.nav-item .nav-link {
+  &:hover {
+    transition: $Smooth;
+    color: $primary !important;
+    transform: scale(1.05);
+  }
+}
+section.top {
+  background: $secondary;
+  margin-top: 10px;
+}
+section.top h1{
+    font-size: 45px;
+}
+
+section.Menu .card{
+border: none;
+}
+.Menu .add-btn{
+  border: 2px solid $primary;
+  color: $primary;
+  transition: $Smooth;
+  &:hover{
+    background-color: $primary;
+    outline: none;
+    color: white;
+  }
+}

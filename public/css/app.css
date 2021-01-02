@@ -1,0 +1,71 @@
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+  height: 5000px;
+}
+
+nav {
+  font-family: "Rubik", sans-serif;
+}
+
+nav .navbar-brand {
+  color: #FE5F1E !important;
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-shadow: 3px 2px 5px #FE5F1E;
+}
+
+nav img {
+  height: 36px;
+  padding: 5px;
+  width: 47px;
+  display: inline-block;
+  border-radius: 25%;
+  box-shadow: 5px 5px 15px 0px #FE5F1E;
+  background-color: #FE5F1E;
+}
+
+nav img:hover {
+  background: #b23301;
+  transform: scale(1.1);
+}
+
+nav li a {
+  font-size: 20px;
+  align-items: center;
+}
+
+.nav-item .nav-link:hover {
+  transition: all 0.3s ease-in-out;
+  color: #FE5F1E !important;
+  transform: scale(1.05);
+}
+
+section.top {
+  background: #f8f8f8;
+  margin-top: 10px;
+}
+
+section.top h1 {
+  font-size: 45px;
+}
+
+section.Menu .card {
+  border: none;
+}
+
+.Menu .add-btn {
+  border: 2px solid #FE5F1E;
+  color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+.Menu .add-btn:hover {
+  background-color: #FE5F1E;
+  outline: none;
+  color: white;
+}
+
