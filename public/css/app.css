@@ -4,7 +4,6 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
-  height: 5000px;
 }
 
 nav {
@@ -46,11 +45,23 @@ nav li a {
 
 section.top {
   background: #f8f8f8;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 section.top h1 {
   font-size: 45px;
+}
+
+section.top .btn-order {
+  background: #FE5F1E;
+  width: 140px;
+  box-shadow: 5px 5px 15px 0px #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+section.top .btn-order:hover {
+  background: #b23301;
+  transform: scale(1.05);
 }
 
 section.Menu .card {
@@ -67,5 +78,126 @@ section.Menu .card {
   background-color: #FE5F1E;
   outline: none;
   color: white;
+}
+
+section.map {
+  font-family: "roboto", sans-serif;
+}
+
+.footer {
+  padding: 20px;
+  opacity: 0.9;
+  background: #cec5c5;
+}
+
+.footer .copyright {
+  color: #232323;
+  margin: auto;
+}
+
+.footer #bottom-link a {
+  color: #b23301;
+}
+
+section.E-cart {
+  background: #f8f8f8;
+}
+
+section.E-cart .btn-back {
+  background: #FE5F1E;
+  width: 140px;
+  box-shadow: 5px 5px 15px 0px #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+section.E-cart .btn-back:hover {
+  background: #b23301;
+  transform: scale(1.05);
+}
+
+section.E-cart .btn-back a {
+  text-decoration: none;
+}
+
+section.Cart {
+  background: #f8f8f8;
+  padding-top: 70px;
+  text-align: center;
+}
+
+section.Cart .amount {
+  color: #FE5F1E;
+}
+
+section.Cart .thead {
+  background: #FE5F1E;
+}
+
+section.Cart .prize {
+  padding-top: 20px;
+}
+
+section.Cart .btn-order {
+  background: #FE5F1E;
+  box-shadow: 5px 5px 15px 0px #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+section.Cart .btn-order:hover {
+  background: #b23301;
+  transform: scale(1.05);
+}
+
+section.Cart .btn-login {
+  background: #FE5F1E;
+  box-shadow: 5px 5px 15px 0px #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+
+section.Cart .btn-login:hover {
+  background: #b23301;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+section.login {
+  background: #f8f8f8;
+  min-height: calc(100vh-90px);
+}
+
+section.login form {
+  padding: 45px;
+  border-radius: 20px;
+  width: 370px;
+  box-shadow: 1px 4px 22px -1px #FE5F1E;
+  transition: all 0.3s ease-in-out;
+  color: #FE5F1E;
+}
+
+section.login form:hover {
+  transform: scale(1.01);
+}
+
+section.login form a {
+  text-decoration: none;
+  color: #FE5F1E;
+  margin-top: 20px;
+}
+
+section.login form .btn-Login {
+  background: #FE5F1E;
+  box-shadow: 5px 5px 15px 0px #FE5F1E;
+  transition: all 0.3s ease-in-out;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+section.login form .btn-Login:hover {
+  background: #b23301;
+  transform: scale(1.05);
+}
+
+#register-form {
+  width: 500px;
 }
 

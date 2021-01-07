@@ -5,7 +5,7 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $dark;
-  height: 5000px;
+  
 }
 nav {
   font-family: "Rubik", sans-serif;
@@ -45,12 +45,25 @@ nav li a {
     transform: scale(1.05);
   }
 }
+
+// section top 
 section.top {
   background: $secondary;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 section.top h1{
     font-size: 45px;
+}
+section.top .btn-order{
+  background:$primary;
+  width: 140px;
+  -webkit-box-shadow: 5px 5px 15px 0px $primary;
+  box-shadow: 5px 5px 15px 0px $primary;
+  transition: $Smooth;
+  &:hover{
+    background: $primary-hover;
+    transform: scale(1.05);
+  }
 }
 
 section.Menu .card{
@@ -65,4 +78,115 @@ border: none;
     outline: none;
     color: white;
   }
+}
+section.map{
+  font-family: "roboto", sans-serif;
+}
+
+// footer section
+.footer {
+  
+  padding: 20px;
+  opacity: 0.9;
+  background: rgb(206, 197, 197);
+}
+.footer .copyright{
+color: $dark;
+margin: auto;
+}
+.footer #bottom-link a{
+color: $primary-hover;
+}
+section.E-cart{
+  background: $secondary;
+}
+section.E-cart .btn-back{
+  background:$primary;
+  width: 140px;
+  -webkit-box-shadow: 5px 5px 15px 0px $primary;
+  box-shadow: 5px 5px 15px 0px $primary;
+  transition: $Smooth;
+  &:hover{
+    background: $primary-hover;
+    transform: scale(1.05);
+    
+  }
+}
+section.E-cart .btn-back a{
+  text-decoration: none;
+}
+section.Cart{
+  background: $secondary;
+  padding-top: 70px;
+  text-align: center;
+  .amount{
+    color: $primary;
+  }
+  .thead{
+    background: $primary;
+  }
+  .prize{
+    padding-top: 20px;
+  }
+  .btn-order{
+    background:$primary;
+    -webkit-box-shadow: 5px 5px 15px 0px $primary;
+    box-shadow: 5px 5px 15px 0px $primary;
+    transition: $Smooth;
+    &:hover{
+      background: $primary-hover;
+      transform: scale(1.05);
+  }
+}
+.btn-login{
+  background:$primary;
+  -webkit-box-shadow: 5px 5px 15px 0px $primary;
+  box-shadow: 5px 5px 15px 0px $primary;
+  transition: $Smooth;
+  &:hover{
+    background: $primary-hover;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+}
+}
+
+section.login{
+   background:$secondary;
+   min-height: calc(100vh-90px);
+  form{
+    padding: 45px ;
+    border-radius: 20px;
+    width: 370px;
+    -webkit-box-shadow: 1px 4px 22px -1px $primary; 
+    box-shadow: 1px 4px 22px -1px $primary;
+    transition: $Smooth;   
+    color: $primary;
+    &:hover{
+      transform: scale(1.01);
+    }
+    a{
+      text-decoration: none;
+      color: $primary;
+      margin-top: 20px;
+    }
+    .btn-Login{
+      background:$primary;
+      -webkit-box-shadow: 5px 5px 15px 0px $primary;
+      box-shadow: 5px 5px 15px 0px $primary;
+      transition: $Smooth;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      &:hover{
+        background: $primary-hover;
+        transform: scale(1.05);
+    }
+    }
+  }
+ 
+}
+
+#register-form{
+  width: 500px;
+ 
 }
