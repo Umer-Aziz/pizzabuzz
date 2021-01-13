@@ -17,143 +17,40 @@
 
 <section id="Menu"class="Menu container mx-auto py-8 mt-2 ">
   <h1 class="text-xl font-bold">All Pizzas</h1>
-  <div class="card-deck mt-4 gap-x-12 gap-y-16">
-    <div class="card ">
-      <div class="IMG-DIV" >
-        <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Margherita</h2>
-        <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
-      </div>
-      <div class="flex items-center justify-around mt-6">
-        <span class="font-bold text-lg mr-1">Rs.450</span>
-        <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
-        <span>+</span>
-        <span class="ml-1">Add</span>
-        </button>
-      </div>
-    </div> 
-      </div>
-      <div class="card ">
-        <div class="IMG-DIV" >
-          <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-        <div class="text-center">
-          <h2 class="mb-4 text-lg">Margherita</h2>
-          <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
-        </div>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg mr-1">Rs.450</span>
-          <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
-          <span>+</span>
-          <span class="ml-2">Add</span>
-          </button>
-        </div>
-      </div> 
-        </div>
-        <div class="card ">
-          <div class="IMG-DIV" >
-            <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-          <div class="text-center">
-            <h2 class="mb-4 text-lg">Margherita</h2>
-            <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
+
+  <div class="row row-cols-1 row-cols-md-3 my-5 m-auto">
+    
+      <% pizzas.forEach(function(pizza){ %>
+        <div class="col py-8">
+        <div class="card">
+          <img
+            src="img/<%= pizza.image%>"
+            class="card-img-top"
+            alt="pizza image"
+          />
+          <div class="card-body">
+            <div class="text-center">
+            <h4 class="card-title mb-4"><%= pizza.name%></h4>
+            <span class="py-1 px-4 rounded-full text-s bg-light"><%= pizza.size%></span>
           </div>
-          <div class="flex items-center justify-around mt-6">
-            <span class="font-bold text-lg mr-1">Rs.450</span>
+          <div class="card-text flex items-center justify-around mt-6">
+            <span class="font-bold text-lg mr-4">Rs.<%= pizza.price%></span>
             <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
             <span>+</span>
             <span class="ml-2">Add</span>
             </button>
           </div>
-        </div> 
           </div>
-          <div class="card ">
-            <div class="IMG-DIV" >
-              <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-            <div class="text-center">
-              <h2 class="mb-4 text-lg">Margherita</h2>
-              <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
-            </div>
-            <div class="flex items-center justify-around mt-6">
-              <span class="font-bold text-lg mr-1">Rs.450</span>
-              <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
-              <span>+</span>
-              <span class="ml-2">Add</span>
-              </button>
-            </div>
-          </div> 
-            </div>
-                    
+        </div>
+        </div>
+   <% }) %>
+     
   </div>
-  <div class="card-deck  mt-12 gap-x-12 gap-y-16">
-    <div class="card ">
-      <div class="IMG-DIV" >
-        <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Margherita</h2>
-        <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
-      </div>
-      <div class="flex items-center justify-around mt-6">
-        <span class="font-bold text-lg mr-1">Rs.450</span>
-        <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
-        <span>+</span>
-        <span class="ml-2">Add</span>
-        </button>
-      </div>
-    </div> 
-      </div>
-      <div class="card ">
-        <div class="IMG-DIV" >
-          <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-        <div class="text-center">
-          <h2 class="mb-4 text-lg">Margherita</h2>
-          <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
-        </div>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg mr-1">Rs.450</span>
-          <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
-          <span>+</span>
-          <span class="ml-2">Add</span>
-          </button>
-        </div>
-      </div> 
-        </div>
-        <div class="card ">
-          <div class="IMG-DIV" >
-            <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-          <div class="text-center">
-            <h2 class="mb-4 text-lg">Margherita</h2>
-            <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
-          </div>
-          <div class="flex items-center justify-around mt-6">
-            <span class="font-bold text-lg mr-1">Rs.450</span>
-            <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-2">Add</span>
-            </button>
-          </div>
-        </div> 
-          </div>
-          <div class="card ">
-            <div class="IMG-DIV" >
-              <img class="h-40 mb-4 mx-auto" src="/img/pizza.png" alt="small pizza">
-            <div class="text-center">
-              <h2 class="mb-4 text-lg">Margherita</h2>
-              <span class="py-1 px-4 rounded-full text-xs bg-light">SMALL</span>
-            </div>
-            <div class="flex items-center justify-around mt-6">
-              <span class="font-bold text-lg mr-1">Rs.450</span>
-              <button class=" add-btn py-1 px-6 rounded-full flex items-center font-bold">
-              <span>+</span>
-              <span class="ml-2">Add</span>
-              </button>
-            </div>
-          </div> 
-            </div>              
-  </div>
+  
 
 </section>
 
-<section class=" map mt-5 ">
+<section class=" map mt-5 mb-4">
   <div>
     <h3 class="ml-4 text-secondary">Location</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3340.3708354937476!2d73.73216159641743!3d33.15189001742597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1609865873096!5m2!1sen!2s" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

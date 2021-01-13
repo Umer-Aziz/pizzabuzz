@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "5ff9ddaf4d34c4477e182365"
+  },
+  "name": "Margherita",
+  "image": "pizza.png",
+  "price": "1150",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5ff9dfdcd5cf72d47ac6da22"
+  },
+  "name": "Marinara",
+  "image": "pizza.png",
+  "price": "700",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "5ff9e1d7d5cf72d47ac6da23"
+  },
+  "name": "Carbonara",
+  "image": "pizza.png",
+  "price": "450",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "5ff9e36f3c101214187e2bf7"
+  },
+  "name": "Crudo",
+  "image": "pizza.png",
+  "price": "1250",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5ff9e38f3c101214187e2bf8"
+  },
+  "name": "Napoletana",
+  "image": "pizza.png",
+  "price": "780",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "5ff9e3bc3c101214187e2bf9"
+  },
+  "name": "Fattoria",
+  "image": "pizza.png",
+  "price": "550",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "5ff9e4203c101214187e2bfa"
+  },
+  "name": "Americana",
+  "image": "pizza.png",
+  "price": "1220",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5ff9e4483c101214187e2bfb"
+  },
+  "name": "Sarda",
+  "image": "pizza.png",
+  "price": "720",
+  "size": "medium"
+}]
