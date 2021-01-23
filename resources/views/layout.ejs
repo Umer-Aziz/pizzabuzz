@@ -33,8 +33,10 @@
             <li class="nav-item">
               <a class="nav-link " href="/login">Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link  " href="/cart"><img src="/img/cart.ico" alt="cart"></a>
+            <li class="nav-item cart-li">
+              <a class=" rounded-full inline-block px-3 flex items-center" href="/cart">
+              <span id="CartCounter" class=" text-white text-sm"><%= session.cart ? session.cart.totalQty : " " %></span>
+              <img src="/img/cart.ico" alt="cart"></a>
             </li>
           </ul>
         </div>

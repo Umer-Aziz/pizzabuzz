@@ -1,4 +1,5 @@
-<!-- <section class="Cart py-3">
+<% if(session.cart) { %>
+<section class="Cart py-12">
   <div class="container flex items-center pt-2">
     <img src="/img/cart-black.png" alt="cart image">
     <h1 class="font-bold ml-4 text-2xl">Order Summary</h1>
@@ -13,45 +14,25 @@
       <th scope="col">Prize</th>
     </tr>
   </thead>
+  <% for(let pizza of Object.values(session.cart.items)){ %>
   <tbody>
     <tr>
-      <td> <img class="w-24 mx-auto" src="/img/pizza.png" alt="pizza image"></td>
-      <td><h1 class="text-lg font-bold">Marinara</h1>
-        <span class="font-bold">MEDIUM</span></td>
-      <td class="font-bold prize text-lg"><span class="text-sm" >(1 pcs)</span> Rs.450</td>
+      <td> <img class="w-24 mx-auto" src="/img/<%= pizza.item.image %>" alt="pizza image"></td>
+      <td><h1 class="text-lg font-bold"><%= pizza.item.name%></h1>
+        <span class="font-bold"><%= pizza.item.size%></span></td>
+      <td class="font-bold prize text-lg">
+        <span class="text-sm">(<%= pizza.qty%>Pcs)
+      </span>Rs.<%=pizza.item.price * pizza.qty%></td>
     </tr>
   </tbody>
+  <% } %>
 </table>
 </div>
-<div class="order container mx-auto ">
-  <table class="table">
-    <tbody>
-      <tr>
-        <td> <img class="w-24 mx-auto" src="/img/pizza.png" alt="pizza image"></td>
-        <td><h1 class="text-lg font-bold">Marinara</h1>
-          <span class="font-bold">MEDIUM</span></td>
-        <td class="font-bold prize text-lg"><span class="text-sm" >(1 pcs)</span> Rs.450</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-<div class="order container mx-auto ">
-  <table class="table">
-    <tbody>
-      <tr>
-        <td> <img class="w-24 mx-auto" src="/img/pizza.png" alt="pizza image"></td>
-        <td><h1 class="text-lg font-bold">Marinara</h1>
-          <span class="font-bold">MEDIUM</span></td>
-        <td class="font-bold prize text-lg"><span class="text-sm" >(1 pcs)</span> Rs.450</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
   <hr>
 <div class="container text-right py-2">
   <div class="container">
     <span class="text-lg font-bold">Total Amount:</span>
-    <span class="amount text-2xl font-bold ml-2">Rs.450</span>
+    <span class="amount text-2xl font-bold ml-2">Rs.<%= session.cart.totalPrice%></span>
   </div>
   <div class="mt-8">
   <form action="/">
@@ -61,10 +42,11 @@
     <button class="px-6 py-2  mt-4 rounded-full text-white font-bold btn-order" type="submit">Order Now</button>
   </div>
   </form>
-</div>
-  <!-- <a class="inline-block cursor-pointer px-6 py-2 text-white font-bold rounded-full mt-4 btn-login" href="#">Login to Continue</a> -->
 <!-- </div>
-</section> --> 
+  <a class="inline-block cursor-pointer px-6 py-2 text-white font-bold rounded-full mt-4 btn-login" href="#">Login to Continue</a>
+ </div> -->
+</section> 
+<% } else { %>
 
 <section class="E-cart py-16 mt-2">
   <div class="container mx-auto text-center">
@@ -77,3 +59,4 @@
  <button class="px-6 mt-4 py-2 rounded-full font-bold btn-back"><a class="text-white" href="/">Go Back</a></button>
 </div>
 </section>
+<% } %>

@@ -4,11 +4,13 @@ const CartController=require("../app/http/controllers/customers/CartController")
 function InitRoutes(app){
     app.get("/",HomeController().index);
     
-    app.get("/cart",CartController().Cart);
-    
     app.get("/login",authController().login);
     
     app.get("/register",authController().register);
+
+    app.get("/cart",CartController().Cart);
+    
+    app.post("/update-cart",CartController().update);
     
 };
 

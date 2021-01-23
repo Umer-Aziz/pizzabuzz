@@ -1,11 +1,14 @@
+require("dotenv").config();
 const express=require("express");
 const app=express();
 const ejs=require('ejs');
 const path=require('path');
 const expressLayouts=require("express-ejs-layouts");
-const PORT= process.env.PORT || 3000;
-
 const mongoose=require("mongoose");
+const session=require("express-session");
+const flash=require("express-flash");
+const MongoDBStore=require("connect-mongo")(session);
+const PORT= process.env.PORT || 3000;
 
 // setting database
 
@@ -24,6 +27,29 @@ connection.once('open',()=>{
     console.log("connection failed..")
 });
 
+// session store 
+let MongoStore=new MongoDBStore({
+    mongooseConnection:connection,
+    collection:"Sessions"
+});
+
+// session config
+app.use(session({
+    secret:process.env.SECRET_COOKIE,
+    resave:false,
+    store:MongoStore,
+    saveUninitialized:false,
+    cookie:{maxAge:1000*60*60*24} //24hours
+}));
+
+app.use(flash());
+app.use(express.json());
+
+// global middleware
+app.use((req,res, next)=>{
+ res.locals.session=req.session;
+ next();
+})
 // setting ejs template engine
 app.use(expressLayouts);
 app.set("views",path.join(__dirname,"/resources/views"));
