@@ -1,14 +1,16 @@
 <section class="login py-20  mt-2 flex justify-center ">
-    <form>
+    <form action="/login" method="POST">
+      <% if(messages.error){%>
+        <span class="text-red-600"><%= messages.error%></span>
+        <%}%>
       <h3 class="pb-3 login-text">Login</h3>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text ">We'll never share your email with anyone else.</small>
+          <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
