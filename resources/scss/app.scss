@@ -187,6 +187,7 @@ section.login{
       -webkit-box-shadow: 5px 5px 15px 0px $primary;
       box-shadow: 5px 5px 15px 0px $primary;
       transition: $Smooth;
+      
       padding-top: 9px;
       padding-bottom: 9px;
       &:hover{
@@ -206,3 +207,14 @@ section.login{
   border-radius: 50px !important;
   padding-left: 10px !important;
 }
+
+a.link {
+  color:$primary;
+  text-decoration: none;
+}
+ #order-id {
+   margin-bottom: 10px;
+   background-color:$secondary;
+   
+ }
+ 

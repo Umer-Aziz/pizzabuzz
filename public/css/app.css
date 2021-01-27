@@ -522,3 +522,13 @@ section.login form .btn-Login:hover {
   padding-left: 10px !important;
 }
 
+a.link {
+  color: #FE5F1E;
+  text-decoration: none;
+}
+
+#order-id {
+  margin-bottom: 10px;
+  background-color: #f8f8f8;
+}
+

@@ -1,5 +1,6 @@
 import axios from "axios";
 import Noty from "noty";
+import initAdmin from './admin'
 
 let addToCart=document.querySelectorAll(".add-cart");
 let Cart_Counter=document.getElementById("CartCounter");
@@ -31,3 +32,15 @@ addToCart.forEach(btn => {
         
     })
 });
+
+//removing alert messge for order pizzaz
+
+const alertMsg=document.getElementById("success-alert")
+if(alertMsg){
+    setTimeout(() =>{
+        alertMsg.remove()
+    },2000)
+}
+initAdmin();
+
+

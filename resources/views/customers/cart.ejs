@@ -34,17 +34,19 @@
     <span class="text-lg font-bold">Total Amount:</span>
     <span class="amount text-2xl font-bold ml-2">Rs.<%= session.cart.totalPrice%></span>
   </div>
+  <% if(user){ %>
   <div class="mt-8">
-  <form action="/">
-  <input  class="border border-gray-400 p-2 " type="number" name="number" placeholder="Phone Number">
+  <form action="/Orders" method="POST">
+  <input  class="border border-gray-400 p-2 " type="number" name="phone" placeholder="Phone Number">
   <input  class="border border-gray-400 p-2  mt-3" type="text" name="address" placeholder="Your Address">
   <div>
     <button class="px-6 py-2  mt-4 rounded-full text-white font-bold btn-order" type="submit">Order Now</button>
   </div>
+  <% }else { %>
+    <a class="inline-block cursor-pointer px-6 py-2 text-white font-bold rounded-full mt-4 btn-login" href="/login">Login to Continue</a> 
+   <% }%>
   </form>
-<!-- </div>
-  <a class="inline-block cursor-pointer px-6 py-2 text-white font-bold rounded-full mt-4 btn-login" href="#">Login to Continue</a>
- </div> -->
+  </div>
 </section> 
 <% } else { %>
 
