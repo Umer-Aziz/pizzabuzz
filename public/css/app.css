@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .noty_layout_mixin,
 #noty_layout__centerRight,
 #noty_layout__centerLeft,
@@ -530,5 +532,112 @@ a.link {
 #order-id {
   margin-bottom: 10px;
   background-color: #f8f8f8;
+}
+
+section.status {
+  background-color: #f8f8f8;
+  min-height: calc(100vh - 86px);
+}
+
+section.status .statusBox {
+  padding: 60px 0 0;
+}
+
+section.status .statusBox ul {
+  margin-left: 85px;
+}
+
+section.status .statusBox ul li span {
+  position: relative;
+  padding-left: 20px;
+}
+
+section.status .statusBox ul li span:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  background: #232323;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-5px);
+  box-shadow: 0 0 1px 10px #f8f8f8;
+}
+
+section.status .statusBox ul li span:before {
+  font-family: "Line Awesome Free";
+  font-size: 46px;
+  font-weight: 600;
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+}
+
+section.status .statusBox ul li:nth-child(1) span:before {
+  content: "\F46C";
+}
+
+section.status .statusBox ul li:nth-child(2) span:before {
+  content: "\F560";
+}
+
+section.status .statusBox ul li:nth-child(3) span:before {
+  content: "\F818";
+}
+
+section.status .statusBox ul li:nth-child(4) span:before {
+  content: "\F0D1";
+}
+
+section.status .statusBox ul li:nth-child(5) span:before {
+  content: "\F582";
+}
+
+section.status .statusBox ul li {
+  position: relative;
+}
+
+section.status .statusBox ul li:before {
+  content: "";
+  top: 0;
+  position: absolute;
+  left: -6px;
+  width: 2px;
+  height: 100%;
+  margin-top: 10px;
+  background: #232323;
+}
+
+section.status .statusBox ul li:nth-child(5) span:after {
+  box-shadow: 0 20px 1px 20px #f8f8f8;
+}
+
+section.status .statusBox ul li.step-completed:before {
+  background: #ccc;
+}
+
+section.status .statusBox ul li.step-completed span:after {
+  background: #ccc;
+}
+
+section.status .statusBox ul li.step-completed span {
+  color: #ccc;
+}
+
+section.status .statusBox ul li.current span {
+  color: #FE5F1E;
+}
+
+section.status .statusBox ul li.current span:after {
+  background: #FE5F1E;
+}
+
+section.status .statusBox ul li small {
+  float: right;
+  font-size: 14px;
+  margin-top: 5px;
 }
 

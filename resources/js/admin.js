@@ -80,6 +80,17 @@ function initAdmin(socket) {
         }).join('')
     }
     
+    socket.on('orderPlace',(order)=>{
+        new Noty({
+            type: "success",
+            timeout: 2000,
+            text: "New Order!",
+            progressBar: false,
+          }).show();
+          orders.unshift(order);
+          tbodyOrder.innerHTML="";
+          tbodyOrder.innerHTML=generateMarkup(orders);
+    })
     
 }
-export default initAdmin
+export default initAdmin;

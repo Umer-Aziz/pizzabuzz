@@ -13,7 +13,7 @@ const OrderSchema = new Schema(
     phone: { type: String, required: true },
     address: { type: String, required: true },
     PaymentType: { type: String, default: "COD" },
-    Status: { type: String, default: "Order_Placed" },
+    status: { type: String, default: "Order_Placed" },
   },
   { timestamps: true }
 );
