@@ -76,15 +76,15 @@ function UpdateStatus(order) {
 UpdateStatus(order);
 
    let socket = io();
-   initAdmin(socket);
+ 
    //join socket
    if(order){
 
        socket.emit('join',`order_${order._id}`);
    }
    let adminpath=window.location.pathname;
-   console.log(adminpath);
    if(adminpath.includes('admin')){
+       initAdmin(socket);
      socket.emit('join',"adminRoom");
    }
 

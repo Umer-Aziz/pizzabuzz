@@ -27034,17 +27034,16 @@ function UpdateStatus(order) {
 }
 
 UpdateStatus(order);
-var socket = io();
-Object(_admin__WEBPACK_IMPORTED_MODULE_3__["default"])(socket); //join socket
+var socket = io(); //join socket
 
 if (order) {
   socket.emit('join', "order_".concat(order._id));
 }
 
 var adminpath = window.location.pathname;
-console.log(adminpath);
 
 if (adminpath.includes('admin')) {
+  Object(_admin__WEBPACK_IMPORTED_MODULE_3__["default"])(socket);
   socket.emit('join', "adminRoom");
 }
 

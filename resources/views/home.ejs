@@ -18,10 +18,10 @@
 <section id="Menu"class="Menu container mx-auto py-8 mt-2 ">
   <h1 class="text-xl font-bold">All Pizzas</h1>
 
-  <div class="row row-cols-1 row-cols-md-3 my-5 m-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-18">
     
       <% pizzas.forEach(function(pizza){ %>
-        <div class="col py-8">
+        <div class="mt-4 mx-4 ">
         <div class="card">
           <img
             src="img/<%= pizza.image%>"

@@ -641,3 +641,17 @@ section.status .statusBox ul li small {
   margin-top: 5px;
 }
 
+@media (max-width: 1060px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  section.status .statusBox ul li span:before {
+    font-size: 34px;
+  }
+}
+
