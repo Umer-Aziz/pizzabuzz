@@ -77,7 +77,7 @@ function initAdmin(socket) {
                 </td>
             </tr>
         `
-        }).join('')
+        }).join('') 
     }
     
     socket.on('orderPlace',(order)=>{

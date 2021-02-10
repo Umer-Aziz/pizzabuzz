@@ -35,11 +35,20 @@
     <span class="amount text-2xl font-bold ml-2">Rs.<%= session.cart.totalPrice%></span>
   </div>
   <% if(user){ %>
-  <div class="mt-8">
-  <form action="/Orders" method="POST">
-  <input  class="border border-gray-400 p-2 " type="number" name="phone" placeholder="Phone Number">
-  <input  class="border border-gray-400 p-2  mt-3" type="text" name="address" placeholder="Your Address">
+  <div class="mt-8 block ml-auto relative w-1/2">
+  <form  class=""id="cartFrom" action="/Orders" method="POST">
+    <div class="form-group ">
+      <select name="PaymentType"class="form-control" id="PaymentType">
+        <option value="cod">Cash on Delivery</option>
+        <option value="card">Pay With Card</option>
+      </select>
+    </div>
+  <input  class="border border-gray-400 p-2 " type="number" name="phone" placeholder="Phone Number"><br>
+  <input  class="border  border-gray-400 p-2  mt-3" type="text" name="address" placeholder="Your Address">
   <div>
+    <div class="mt-4 " id="card-elem">
+
+    </div>
     <button class="px-6 py-2  mt-4 rounded-full text-white font-bold btn-order" type="submit">Order Now</button>
   </div>
   <% }else { %>

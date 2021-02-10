@@ -2,6 +2,7 @@ import axios from "axios";
 import Noty from "noty";
 import moment from "moment";
 import initAdmin from "./admin";
+import {initStripe} from "./stripe";
 
 let addToCart = document.querySelectorAll(".add-cart");
 let Cart_Counter = document.getElementById("CartCounter");
@@ -44,7 +45,6 @@ if (alertMsg) {
   }, 2000);
 }
 
-
 //update order Status
 let Orderstatus = document.querySelectorAll(".statusLine");
 let HiddenInput = document.getElementById("InputHidden");
@@ -53,10 +53,10 @@ order = JSON.parse(order);
 let time = document.createElement("small");
 
 function UpdateStatus(order) {
-  Orderstatus.forEach((status)=>{
+  Orderstatus.forEach((status) => {
     status.classList.remove("step-completed");
     status.classList.remove("current");
-  })
+  });
   let StepCompleted = true;
   Orderstatus.forEach((status) => {
     let getData = status.dataset.status;
@@ -74,31 +74,29 @@ function UpdateStatus(order) {
   });
 }
 UpdateStatus(order);
+initStripe();
 
-   let socket = io();
- 
-   //join socket
-   if(order){
+let socket = io();
 
-       socket.emit('join',`order_${order._id}`);
-   }
-   let adminpath=window.location.pathname;
-   if(adminpath.includes('admin')){
-       initAdmin(socket);
-     socket.emit('join',"adminRoom");
-   }
+//join socket
+if (order) {
+  socket.emit("join", `order_${order._id}`);
+}
+let adminpath = window.location.pathname;
+if (adminpath.includes("admin")) {
+  initAdmin(socket);
+  socket.emit("join", "adminRoom");
+}
 
-   socket.on('orderUpdated',(data)=>{
-       const updatedOrder={...order }
-       updatedOrder.updatedAt=moment().format();
-       updatedOrder.status=data.status;
-       UpdateStatus(updatedOrder);
-       new Noty({
-        type: "success",
-        timeout: 2000,
-        text: "Order Updated",
-        progressBar: false,
-      }).show();
-       
-   })
-
+socket.on("orderUpdated", (data) => {
+  const updatedOrder = { ...order };
+  updatedOrder.updatedAt = moment().format();
+  updatedOrder.status = data.status;
+  UpdateStatus(updatedOrder);
+  new Noty({
+    type: "success",
+    timeout: 2000,
+    text: "Order Updated",
+    progressBar: false,
+  }).show();
+});
