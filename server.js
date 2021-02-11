@@ -13,8 +13,7 @@ const Emitter = require("events");
 const PORT = process.env.PORT || 3000;
 
 // setting database
-
-mongoose.connect("mongodb://localhost:27017/pizza", {
+mongoose.connect(process.env.MONGO_CONNECTION_URL, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
@@ -75,6 +74,9 @@ app.use(express.static("public"));
 
 // setting routes
 require("./routes/web")(app);
+app.use((req,res)=>{
+    res.status(404).render('errors/404')
+})
 
 const server = app.listen(PORT, () => {
   console.log(`The Server run at Port:${PORT}`);
