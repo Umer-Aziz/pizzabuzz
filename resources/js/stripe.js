@@ -33,7 +33,7 @@ export async function initStripe() {
     return;
   }
   PaymentType.addEventListener("change", (e) => {
-    console.log(e.target.value);
+    
 
     if (e.target.value === "card") {
       //   display widget
